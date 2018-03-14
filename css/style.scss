@@ -1,0 +1,31 @@
+$text-color-menu: #000000;
+
+.set-bg-menu{
+  position: absolute;
+  background-image: url("../img/bg-menu.png");
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-inverse-01{
+  background-color: #e5e6e6;
+  border-radius: 0;
+
+  .navbar-nav{
+
+    li{
+
+      .menu{
+        color: #868080;
+
+
+        &:hover{
+          color: $text-color-menu;
+          padding-bottom: 5px;
+          border-bottom: 1px $text-color-menu solid ;
+        }
+      }
+    }
+  }
+}
