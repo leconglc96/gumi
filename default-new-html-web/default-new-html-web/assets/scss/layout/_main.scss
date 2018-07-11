@@ -1,22 +1,38 @@
 body {
-    //background-image: url(../../img/background.png);
     background-repeat: no-repeat;
-    background: url("../img/background.png");
+    background       : url("../img/background.png");
 }
 .second_banner {
-    //margin-left: 28px;
     position: relative;
+
+    .text {
+        position  : absolute;
+        top       : 76%;
+        left      : 13%;
+        right     : 13%;
+        font-size : 1.7em;
+        text-align: center;
+    }
+    .btn-default__pos {
+        position     : absolute;
+        top          : 90%;
+        left         : 43%;
+        padding      : 7px 40px;
+        border-radius: 15px;
+        outline      : none;
+        background   : linear-gradient(to right, #c9cacb,#fff, #c9cacb);
+    }
 }
 .video1, .video2, .video3 {
     position: absolute;
-    width: 21%;
-    top: 50%;
+    width   : 23%;
+    top     : 50%;
 }
 .video1 {
     left: 15%;
 }
 .video2 {
-    left: 39.5%;
+    left: 38.5%;
 }
 .video3 {
     right: 15%;
@@ -24,123 +40,91 @@ body {
 
 .btn-info {
     background-color: #4771c3;
-}
-.btn-info_01, .btn-info_02, .btn-info_03 {
-    position: absolute;
-    top: 110%;
-    left: 24%;
+    &_01, &_02, &_03 {
+        position    : absolute;
+        top         : 110%;
+        left        : 26%;
+
+        // RESPONSIVE
+        @media screen and (max-width: 1199px) {
+            left     : 21%;
+        }
+    }
+    .fa-facebook {
+        padding-right: 10px;
+        border-right : 2px solid #3d64b6;
+        margin-right : 5px;
+        // RESPONSIVE
+        @media screen and (max-width: 991px) {
+            display  : none;
+        }
+    }
 }
 
-.text {
-    position: absolute;
-    top: 76%;
-    left: 13%;
-    right: 13%;
-    font-size: 1.7em;
+.img_scale {
+    margin-top   : 60px;
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+.text_title {
     text-align: center;
-}
-
-.btn-default__pos {
-    position: absolute;
-    top: 90%;
-    left: 43%;
-    padding: 7px 40px;
-    border-radius: 15px;
-    outline: none;
-    background: linear-gradient(to right, #c9cacb,#fff, #c9cacb);
-}
-
-.header_banner {
-    position: relative;
-}
-
-// .logo_header {
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     opacity: 0.2;
-//     background: linear-gradient(to left, #fff 80%, #000);
-// }
-// .logo {
-//     position: absolute;
-//     top: 0;
-//     right: 3%;
-// }
-
-.col-md-4 {
-    margin-top: 60px;
-}
-.col-md-4:hover {
-    transform: scale(1.15);
-}
-
-.col-md-8 {
-    text-align: center;
-    font-size: 1.4em;
+    font-size : 1.4em;
     margin-top: 4%;
 }
 
 .topic {
-    float: left;
-    width: 33.3333%;
+    float     : left;
+    width     : 33.3333%;
     margin-top: 3%;
-    padding: 0;
-}
+    padding   : 0;
 
-figure {
-	width: 100%;
-    overflow: hidden;
-    position: relative;
-}
+    figure {
+        width   : 100%;
+        overflow: hidden;
+        position: relative;
 
-.topic figure img {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.topic figure:hover img {
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
-}
-.link {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background: #df8600;
-    opacity: 0.9;
-    height: 15%;
-    color: #fff;
-    padding-top: 6%;
-    font-size: 18px;
-}
-.link a {
-    color: #fff;
-    margin-right: 15px; 
-}
+        img {
+            -webkit-transform : scale(1);
+            transform         : scale(1);
+            -webkit-transition: .3s ease-in-out;
+            transition        : .3s ease-in-out;
+        }
 
-.link a:hover {
-    text-decoration: underline;
-}
-.link_2 {
-    background: #a0b963;
-}
-.link_3 {
-    background: #e37875;
-}
-.copyright {
-    text-align: right;
-    margin-top: 10px;
-}
+        &:hover img {
+            -webkit-transform: scale(1.1);
+            transform        : scale(1.1);
+        }
 
-footer {
-    margin-bottom: 100px;
-    margin-top: 60px;
-}
+        .link {
+            position: absolute;
+            bottom  : 0;
+            width: 100%;
+            text-align: center;
+            background: #df8600;
+            opacity: 0.9;
+            height: 15%;
+            color: #fff;
+            padding-top: 6%;
+            font-size: 18px;
 
-.fa-facebook {
-    padding-right: 10px;
-    border-right: 2px solid #3d64b6;
-    margin-right: 5px;
+            a {
+                color: #fff;
+                margin-right: 15px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &.link_2 {
+                background: #a0b963;
+            }
+
+            &.link_3 {
+                background: #e37875;
+            }
+        }
+    }
 }
